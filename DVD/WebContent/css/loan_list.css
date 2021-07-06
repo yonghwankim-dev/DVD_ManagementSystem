@@ -1,0 +1,15 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+input[type="button"] {
+  padding: 5px 8px;
+  border: 1px solid black;
+}
+
+select {
+  padding: 5px 8px;
+}

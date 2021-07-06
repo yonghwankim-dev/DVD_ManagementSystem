@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/c_info.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>고객정보 조회</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main__table__container">
+            <table class="main__table">
+                <thead>
+                    <tr>
+                        <th>C_NUM</th>
+                        <th>ID</th>
+                        <th>비밀번호</th>
+                        <th>이름</th>
+                        <th>주민등록번호</th>
+                        <th>주소</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>chsk7</td>
+                        <td>anjdal</td>
+                        <td>최성규</td>
+                        <td>850412-1234568</td>
+                        <td>경기도 수원시</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>chsk8</td>
+                        <td>anjdal</td>
+                        <td>하정현</td>
+                        <td>981115-1234568</td>
+                        <td>서울시 양천구</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="main__search">
+            <form action="" method="post">
+                <table class="search__table">
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="name" placeholder="이름"></td>
+                            <td><input type="submit" name="search_name" value="검색"></td>
+                            <td rowspan="2"><input type="submit" id="all" name="all" value="전체보기"></td>
+                            <td><input type="submit" name="search_family" value="가족검색"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="id" placeholder="ID"></td>
+                            <td><input type="submit" name="search_id" value="검색"></td>
+                            <td><input type="button" id="cancel" class="cancelBtn" onclick="location.href='index.html'" value="취소"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
