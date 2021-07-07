@@ -1,0 +1,8 @@
+package entity;
+
+public class Family {
+	private int c_f_num;	// 회원번호
+	private String f_name;	// 가족성명
+	private String f_id;	// 가족아이디
+	
+}

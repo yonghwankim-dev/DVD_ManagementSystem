@@ -1,0 +1,25 @@
+package service;
+
+import java.util.List;
+
+import entity.Customer;
+
+public class CustomerService {
+	// 이름으로 검색
+	public static List<Customer> findCustomerListByName(String name)
+	{
+		return null;
+	}
+	
+	// ID로 검색
+	public static List<Customer> findCustomerListById(String id)
+	{
+		return null;
+	}
+	
+	// 전체보기
+	public static List<Customer> findCustomerAllList()
+	{
+		return null;
+	}
+}

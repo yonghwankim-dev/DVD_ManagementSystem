@@ -1,0 +1,11 @@
+package service;
+
+public class DVDManageService {
+	// DVD 추가
+	
+	// DVD 업데이트
+	
+	// DVD 삭제
+	
+	// DVD 새로고침
+}

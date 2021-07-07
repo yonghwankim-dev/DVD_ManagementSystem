@@ -1,0 +1,12 @@
+package service;
+
+public class CustomerService {
+	// 이름으로 검색
+	public static List<Customer> findCustomerByName(String name)
+	{
+		return null;
+	}
+	// ID로 검색
+
+	// 전체보기
+}

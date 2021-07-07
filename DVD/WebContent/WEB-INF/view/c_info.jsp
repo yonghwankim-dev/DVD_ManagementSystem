@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,38 +28,32 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>chsk7</td>
-                        <td>anjdal</td>
-                        <td>최성규</td>
-                        <td>850412-1234568</td>
-                        <td>경기도 수원시</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>chsk8</td>
-                        <td>anjdal</td>
-                        <td>하정현</td>
-                        <td>981115-1234568</td>
-                        <td>서울시 양천구</td>
-                    </tr>
+                	<c:forEach var="customer" items="${c_info_list}">
+	                	<tr>
+	                        <td>${customer.c_num}</td>
+	                        <td>${customer.id}</td>
+	                        <td>${customer.password}</td>
+	                        <td>${customer.name}</td>
+	                        <td>${customer.register_num}</td>
+	                        <td>${customer.address}</td>
+	                    </tr>
+                	</c:forEach>
                 </tbody>
             </table>
         </div>
         <div class="main__search">
-            <form action="" method="post">
+            <form action="/DVD/index/c_info" method="post">
                 <table class="search__table">
                     <tbody>
                         <tr>
                             <td><input type="text" name="name" placeholder="이름"></td>
-                            <td><input type="submit" name="search_name" value="검색"></td>
-                            <td rowspan="2"><input type="submit" id="all" name="all" value="전체보기"></td>
-                            <td><input type="submit" name="search_family" value="가족검색"></td>
+                            <td><input type="submit" name="search" value="이름검색"></td>
+                            <td rowspan="2"><input type="submit" id="all" name="search" value="전체보기"></td>
+                            <td><input type="submit" name="search" value="가족검색"></td>
                         </tr>
                         <tr>
                             <td><input type="text" name="id" placeholder="ID"></td>
-                            <td><input type="submit" name="search_id" value="검색"></td>
+                            <td><input type="submit" name="search" value="ID검색"></td>
                             <td><input type="button" id="cancel" class="cancelBtn" onclick="location.href='/DVD/index'" value="취소"></td>
                         </tr>
                     </tbody>

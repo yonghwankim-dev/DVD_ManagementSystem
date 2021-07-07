@@ -1,0 +1,15 @@
+package entity;
+
+import java.util.Date;
+
+public class DVD {
+	private int d_num;			// DVD 번호
+	private String director;	// 감독
+	private Date release_date;	// 개봉일
+	private String title;		// 제목
+	private String category;	// 장르
+	private int d_borrow_fee;	// 대여료
+	private String rating;		// 관람등급
+	
+	
+}

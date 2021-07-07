@@ -1,0 +1,6 @@
+﻿C_NUM,ID,NAME,REGISTER_NUM,EMAIL,PHONE,PASSWORD,ADDRESS,POINT
+1,user1,홍길동,010102-1234561,user1@naver.com,010-1111-1234,pwd1,서울,0
+2,user2,김청수,010102-1234562,user2@naver.com,010-1111-1235,pwd2,서울,0
+3,user3,김갑환,010102-1234563,user3@naver.com,010-1111-1236,pwd3,서울,0
+4,user4,류,010102-1234564,user4@naver.com,010-1111-1237,pwd4,서울,0
+5,user5,류재환,010102-1234565,user5@naver.com,010-1111-1238,pwd5,서울,0

@@ -1,0 +1,14 @@
+package service;
+
+import java.util.List;
+
+import entity.Customer;
+import entity.Family;
+
+public class FamilyService {
+	// 가족검색
+	public static List<Customer> findFamilyListByName(String name)
+	{
+		return null;
+	}
+}

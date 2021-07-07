@@ -1,0 +1,4 @@
+﻿A_NUM,A_ID,A_NAME,A_REGISTER_NUM,A_EMAIL,A_PHONE,A_PASSWORD,A_ADDRESS
+1,admin1,김용환,981103-1234567,yonghwan@naver.com,010-1234-5678,pwd1,서울
+2,admin2,이수형,980505-1234568,lee@naver.com,010-1235-4678,pwd2,경기
+3,admin3,김정진,000105-1234569,jung@naver.com,010-1236-5681,pwd3,부산
