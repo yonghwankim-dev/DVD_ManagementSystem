@@ -14,13 +14,13 @@
     <div class="main">
         <h2>대여목록</h2>
         <div class="main__container">
-            <form action="" method="post">
-                <select name="loan_category">
+            <form action="/DVD/index/loan_list" method="post">
+                <select name="category">
                     <option>이름</option>
                 </select>
-                <input type="text" name="loan_input">
+                <input type="text" name="content">
                 <input type="submit" name="search" value="검색">
-                <input type="submit" name="allView" value="전체보기">
+                <input type="submit" name="search" value="전체보기">
                 <input type="button" class="cancelBtn" name="cancel" onclick="location.href='/DVD/index'" value="종료">
             </form>
         </div>

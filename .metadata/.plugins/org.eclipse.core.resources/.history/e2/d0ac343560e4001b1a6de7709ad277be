@@ -1,0 +1,14 @@
+function openInsertPopUp()
+{
+	const url = "/DVD/index/dvd_admin/insert";
+	const name = "InsertDVD";
+	const option = "width = 500, height = 800, top = 100, left = 200, location=no";
+	window.open(url,name,option);
+}
+
+function submitInsertPopUp()
+{
+	document.insert_form.action = "/DVD/index/dvd_admin/insert";
+	console.log("call submitInsertPopUp function");
+	//window.open("about:blank","_self").close();
+}

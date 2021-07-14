@@ -1,0 +1,19 @@
+input[type="text"] {
+  padding: 5px 8px;
+}
+
+input[type="submit"], input[type="button"] {
+  padding: 5px 8px;
+  background-color: #04aa6d;
+  border: 1px solid black;
+  color: white;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  padding: 5px 8px;
+  background-color: red;
+  border: 1px solid black;
+  color: white;
+  cursor: pointer;
+}

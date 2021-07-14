@@ -9,10 +9,16 @@ public class DVD {
 	private String title;		// 제목
 	private String category;	// 장르
 	private int d_borrow_fee;	// 대여료
-	private String rating;		// 관람등급
+	private int rating;		// 관람등급
 	
+	
+	
+	public DVD(int d_num, Date release_date, String title) {
+		this(d_num, null, release_date, title, null, -1, -1);
+	}
+
 	public DVD(int d_num, String director, Date release_date, String title, String category, int d_borrow_fee,
-			String rating) {
+			int rating) {
 		this.d_num = d_num;
 		this.director = director;
 		this.release_date = release_date;
@@ -58,10 +64,10 @@ public class DVD {
 	public void setD_borrow_fee(int d_borrow_fee) {
 		this.d_borrow_fee = d_borrow_fee;
 	}
-	public String getRating() {
+	public int getRating() {
 		return rating;
 	}
-	public void setRating(String rating) {
+	public void setRating(int rating) {
 		this.rating = rating;
 	}
 	

@@ -1,0 +1,9 @@
+function openInsertPopUp()
+{
+	const parmas = $("#insert_form").serialize();
+	$.ajax({
+		url : '<c:url value='+url_+'/>',
+		data : params,
+		success : function(xh){window.close();}
+	});
+}

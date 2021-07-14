@@ -1,0 +1,4 @@
+function openInsertPopUp()
+{
+	console.log("call openInsertPopUp function");
+}

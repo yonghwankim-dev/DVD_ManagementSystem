@@ -11,6 +11,11 @@ public class Customer {
 	private String address;			// 주소
 	private int point;				// 포인트 점수
 	
+	
+	public Customer(String id, String name, String phone) {
+		this(-1,id,name,null,null,phone,null,null,-1);
+	}
+
 	public Customer(int c_num, String id, String name, String register_num, String email, String phone, String password,
 			String address, int point) {
 		this.c_num = c_num;

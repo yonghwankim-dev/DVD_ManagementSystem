@@ -1,0 +1,36 @@
+package controller;
+
+import java.io.IOException;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import service.DVDService;
+
+@WebServlet("/index/dvd_srch")
+public class DVD_SrchController extends HttpServlet{
+	private static Map<String, String> map = new HashMap(){{put("주연","main_actor")}};
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("/WEB-INF/view/dvd_srch.jsp").forward(request, response);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		
+		String category = request.getParameter("category");
+		String content = request.getParameter("content");
+		String release = request.getParameter("release");
+		
+		System.out.println("category : " + category);
+		System.out.println("content : " + content);
+		System.out.println("release : " + release);
+		DVDService.findDVDList(select, content, order);
+	}
+	
+}

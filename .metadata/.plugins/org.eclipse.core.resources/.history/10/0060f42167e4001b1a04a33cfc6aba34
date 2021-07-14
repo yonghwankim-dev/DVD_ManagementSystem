@@ -1,0 +1,10 @@
+function openInsertPopUp()
+{
+	const url_ = "/DVD/index/dvd_admin/insert"
+	const params = $("#insert_form").serialize();
+	$.ajax({
+		url : url_,
+		data : params,
+		success : function(xh){window.open();}
+	});
+}

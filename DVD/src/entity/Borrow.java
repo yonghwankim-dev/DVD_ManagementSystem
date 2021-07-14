@@ -9,6 +9,12 @@ public class Borrow {
 	private Date borrow_date;	// 대여일자
 	private Date return_date;	// 반납예정일자
 	
+	
+	
+	public Borrow(Date borrow_date) {
+		this(-1,-1,-1,borrow_date,null);
+	}
+
 	public Borrow(int c_b_num, int d_b_num, int borrow_fee, Date borrow_date, Date return_date) {
 		this.c_b_num = c_b_num;
 		this.d_b_num = d_b_num;

@@ -1,0 +1,7 @@
+function openInsertPopUp()
+{
+	const url = "/DVD/index/dvd_admin/insert"
+	const name = "insertPopUp";
+	
+	
+}

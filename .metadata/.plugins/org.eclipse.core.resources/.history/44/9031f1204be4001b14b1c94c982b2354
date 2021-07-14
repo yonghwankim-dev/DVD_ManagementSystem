@@ -1,0 +1,36 @@
+package controller.dvd_admin;
+
+import java.io.IOException;
+import java.util.Date;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/index/dvd_admin/insert")
+public class DVD_InsertPopUpContoller extends HttpServlet{
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("/WEB-INF/view/dvd_admin/insert.jsp").forward(request, response);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String title = request.getParameter("title");
+		String director = request.getParameter("director");
+		String category = request.getParameter("category");
+		int rating = Integer.parseInt(request.getParameter("rating"));
+		int borrow_fee = Integer.parseInt(request.getParameter("borrow_fee"));
+		String date = request.getParameter("release");
+		
+		System.out.println("date : " + date);
+		
+	}
+	
+	
+	
+}

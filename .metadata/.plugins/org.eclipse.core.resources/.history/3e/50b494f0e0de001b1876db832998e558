@@ -1,6 +1,0 @@
-package entity;
-
-public class Manage {
-	private int a_m_num;	// 관리자 번호
-	private int d_m_num;	// DVD 번호
-}

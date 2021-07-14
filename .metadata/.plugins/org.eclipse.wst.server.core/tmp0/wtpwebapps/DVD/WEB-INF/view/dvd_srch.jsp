@@ -15,7 +15,7 @@
 <body>
     <div class="main">
         <div class="main__container">
-            <form action="" method="post">
+            <form action="/DVD/index/dvd_srch" method="post">
                 <div class="main__row">
                     <select name="category" class="main__category">
                         <option>주연</option>
@@ -26,8 +26,9 @@
                 </div>
 
                 <div class="main__row">
-                    <label><input type="radio" class="main__release" name="release" value="recent" checked>최신순</label>
-                    <label><input type="radio" class="main__release" name="release" value="old">과거순</label>
+                	<label>DVD 번호</label>
+                    <label><input type="radio" class="main__release" name="order" value="asc" checked>최신순</label>
+                    <label><input type="radio" class="main__release" name="order" value="desc">과거순</label>
                 </div>
 
                 <div class="main__row">

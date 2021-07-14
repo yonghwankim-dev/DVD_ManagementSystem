@@ -1,0 +1,27 @@
+function openInsertPopUp()
+{
+	const url = "/DVD/index/dvd_admin/insert";
+	const name = "insertPopUp";
+	const option = "width = 500, height=750, top = 100, left = 200, location=no";
+	
+	window.name = "parent";
+	window.open(url,name,option);
+}
+
+
+function submitInsertPopUp()
+{
+	// form의 target을 부모창으로 설정함
+	document.insert_form.target = opener.name;
+	
+	console.log("document.insert_form.target : " + document.insert_form.target);
+	/*
+	document.insert_form.submit();	
+	if(opener != null)
+	{
+		opener.insertPopUp = null;
+		
+		self.close();
+	}
+	*/
+}

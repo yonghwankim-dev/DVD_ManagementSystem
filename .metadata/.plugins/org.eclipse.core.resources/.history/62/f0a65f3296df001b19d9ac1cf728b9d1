@@ -1,0 +1,15 @@
+package entity.loan_list;
+
+
+import entity.Customer;
+import entity.DVD;
+
+// 대여목록을 담기 위한 클래스
+public class Loan {
+	private DVD dvd;
+	private Customer customer;
+	private Borrow;
+	
+	
+	
+}

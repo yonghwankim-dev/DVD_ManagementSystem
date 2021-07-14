@@ -47,7 +47,7 @@ public class C_infoController extends HttpServlet{
 				case "이름검색":
 					c_info_list = CustomerService.findCustomerListByName(name);
 					break;
-				case "가족검색":	// 구현중
+				case "가족검색":
 					c_info_list = FamilyService.findFamilyListByName(name);
 					break;
 				case "ID검색":

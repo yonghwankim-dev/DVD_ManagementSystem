@@ -1,9 +1,0 @@
-package controller;
-
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-
-@WebServlet("/index/DVD_Srch")
-public class DVD_SrchController extends HttpServlet{
-
-}

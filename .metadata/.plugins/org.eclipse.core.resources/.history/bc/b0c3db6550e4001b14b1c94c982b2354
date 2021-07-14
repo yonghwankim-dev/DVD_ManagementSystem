@@ -1,0 +1,85 @@
+package service;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import entity.DVD;
+
+public class DVDManageService {
+	
+	// DVD 추가
+	public static boolean InsertDVD(DVD newDVD)
+	{
+		
+		Connection con = null;
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String url = "jdbc:oracle:thin:@localhost:1521/xepdb1";
+			String sql = "insert into dvd(d_num,director, release_date, title, category, d_borrow_fee, rating) "
+					+ "values(DVD_SEQ.nextval, ?, ?, ?, ?, ?, ?)";
+
+			
+			con = DriverManager.getConnection(url,"DVD_USER","DVD_USER");
+			pst = con.prepareStatement(sql);
+			pst.setString(1, newDVD.getDirector());
+			pst.setDate(2, (Date) newDVD.getRelease_date());
+			pst.setString(3, newDVD.getTitle());
+			pst.setString(4, newDVD.getCategory());
+			pst.setInt(5, newDVD.getD_borrow_fee());
+			pst.setInt(6, newDVD.getRating());
+			rs = pst.executeQuery();
+			
+			while(rs.next())
+			{
+				DVD dvd = new DVD(
+									rs.getInt("d_num"),
+									rs.getString("director"),
+									rs.getDate("release_date"),
+									rs.getString("title"),
+									rs.getString("category"),
+									rs.getInt("d_borrow_fee"),
+									rs.getInt("rating")
+									);	
+				dvd_list.add(dvd);
+			}
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			System.out.println("findDVDList 메서드, DVD검색중 실패");
+			e.printStackTrace();
+		}finally {
+			rs.close();
+			pst.close();
+			con.close();
+		}
+		
+		return dvd_list;
+
+	}
+	
+	// DVD 업데이트
+	public static boolean UpdateDVD()
+	{
+		return false;
+	}
+	
+	// DVD 삭제
+	public static boolean DeleteDVD()
+	{
+		return false;
+	}
+	
+	// DVD 새로고침
+	public static boolean RefreshDVD()
+	{
+		return false;
+	}
+}
