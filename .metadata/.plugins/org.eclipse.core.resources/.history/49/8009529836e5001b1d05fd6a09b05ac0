@@ -20,7 +20,7 @@
                 <table class="main__table">
                     <thead>
                         <tr>
-                        	<th><input type="checkbox" nmae="allchk" onclick="selectAll(this)"></th>
+                        	<th><input type="checkbox" nmae="allchk"></th>
                         	<th>제목</th>
 	                        <th>감독</th>
 	                        <th>장르</th>

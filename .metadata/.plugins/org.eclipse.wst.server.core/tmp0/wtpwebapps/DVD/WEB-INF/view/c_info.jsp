@@ -30,12 +30,12 @@
                 <tbody>
                 	<c:forEach var="customer" items="${c_info_list}">
 	                	<tr>
-	                        <td>${customer.c_num}</td>
-	                        <td>${customer.id}</td>
-	                        <td>${customer.password}</td>
-	                        <td>${customer.name}</td>
-	                        <td>${customer.register_num}</td>
-	                        <td>${customer.address}</td>
+	                        <td>${customer.c_num}</td>			<!-- 회원번호 -->
+	                        <td>${customer.id}</td>				<!-- ID -->
+	                        <td>${customer.password}</td>		<!-- 비밀번호 -->
+	                        <td>${customer.name}</td>			<!-- 이름 -->
+	                        <td>${customer.register_num}</td>	<!-- 주민등록번호 -->
+	                        <td>${customer.address}</td>		<!-- 주소 -->
 	                    </tr>
                 	</c:forEach>
                 </tbody>
