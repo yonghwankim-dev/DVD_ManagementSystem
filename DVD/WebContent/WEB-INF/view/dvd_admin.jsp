@@ -15,12 +15,12 @@
 
 <body>
     <div class="main">
-        <form action="" method="post">
+        <form action="/DVD/index/dvd_admin" method="post">
             <div class="main__table__container">
                 <table class="main__table">
                     <thead>
                         <tr>
-                        	<th><input type="checkbox" name="chk"></th>
+                        	<th><input type="checkbox" nmae="allchk"></th>
                         	<th>제목</th>
 	                        <th>감독</th>
 	                        <th>장르</th>
@@ -32,7 +32,7 @@
                     <tbody>
                         <c:forEach var="dvd" items="${dvd_list}">
 		                	<tr>
-		                		<td><input type="checkbox" name="chk"></td>
+		                		<td><input type="checkbox" name="chk" value="${dvd.d_num}"></td>
 		                        <td>${dvd.title}</td>
 		                        <td>${dvd.director}</td>
 		                        <td>${dvd.category}</td>
@@ -45,7 +45,7 @@
                 </table>
             </div>
             <div class="main__btns">
-                <input type="button" name="cmd" onclick="openInsertPopUp()" value="추가">
+                <input type="button" name="cmd" value="추가" onclick="openInsertPopUp()">
                 <input type="submit" name="cmd" value="수정">
                 <input type="submit" name="cmd" value="삭제">
                 <input type="submit" name="cmd" value="새로 고침">
@@ -55,6 +55,7 @@
     </div>
     
     <script type="text/javascript" src="/DVD/js/dvd_admin.js"></script>   
+    <script type="text/javascript" src="/DVD/js/jquery-3.6.0.min.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,0 @@
-package entity.loan_list;
-
-// 대여목록을 담기 위한 클래스
-public class Loan {
-
-}

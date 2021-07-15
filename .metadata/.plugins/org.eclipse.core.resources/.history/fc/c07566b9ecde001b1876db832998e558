@@ -1,9 +1,0 @@
-package service;
-
-public class FamilyService {
-	// 가족검색
-	public static List<Family> findFamilyListByName(String name)
-	{
-		return null;
-	}
-}

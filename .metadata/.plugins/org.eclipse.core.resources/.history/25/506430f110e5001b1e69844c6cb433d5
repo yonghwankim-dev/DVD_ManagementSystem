@@ -1,0 +1,63 @@
+
+const option = "width = 500, height=750, top = 100, left = 200, location=no";
+function openInsertPopUp()
+{
+	const url = "/DVD/index/dvd_admin/insert";
+	const name = "insertPopUp";
+	
+	window.name = url;
+	window.open(url,name,option);
+}
+
+
+function submitInsertPopUp()
+{	
+	document.insert_form.target = opener.name;
+	
+	document.insert_form.action = "/DVD/index/dvd_admin/insert";
+	document.insert_form.submit();	
+	
+	if(opener != null)
+	{
+		opener.insertPopUp = null;
+		
+		self.close();
+	}	
+}
+
+function openUpdatePopUp()
+{
+	const url = "/DVD/index/dvd_admin/update";
+	const name = "updatePopUp";
+	
+	const checkbox = document.querySelector("input[name=chk]:checked");
+
+	let title = "";
+	let director = "";
+	let category = "";
+	let rating = "";
+	let borrow_fee = "";
+	let release = "";
+	
+	checkbox.each(function(i){
+		let tr = checkbox.parent().parent().eq(i);
+		let td = tr.children();
+		
+		title = td.eq(1).text();
+		director = td.eq(2).text();
+		category = td.eq(3).text();
+		rating = td.eq(4).text();
+		borrow_fee = td.eq(5).text();
+		release = td.eq(6).text();
+		
+		console.log("title : " + title);
+		console.log("director : " + director);
+		console.log("category : " + category);
+		console.log("rating : " + rating);
+		console.log("borrow_fee: " + borrow_fee);
+		console.log("release : " + release);
+	})
+	
+	window.name = url;
+	window.open(url,name,option);
+}

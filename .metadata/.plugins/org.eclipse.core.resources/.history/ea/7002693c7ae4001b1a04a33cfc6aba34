@@ -1,0 +1,43 @@
+
+const option = "width = 500, height=750, top = 100, left = 200, location=no";
+function openInsertPopUp()
+{
+	const url = "/DVD/index/dvd_admin/insert";
+	const name = "insertPopUp";
+	
+	window.name = url;
+	window.open(url,name,option);
+}
+
+
+function submitInsertPopUp()
+{	
+	document.insert_form.target = opener.name;
+	
+	document.insert_form.action = "/DVD/index/dvd_admin/insert";
+	document.insert_form.submit();	
+	
+	if(opener != null)
+	{
+		opener.insertPopUp = null;
+		
+		self.close();
+	}	
+}
+
+function openUpdatePopUp()
+{
+	const url = "/DVD/index/dvd_admin/update";
+	const name = "updatePopUp";
+	
+	const chks = document.getElementsByName("chk");
+	
+	console.log(chks);
+	for(var i=0;i<chks.length;i++)
+	{
+		console.log(chks[i].chekced);
+	}
+	
+//	window.name = url;
+//	window.open(url,name,option);
+}
